@@ -3,4 +3,4 @@ project(c C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(c source/main.c header/calculos.c header/calculos.h)
+add_executable(c source/main.c headers/calculos.c headers/calculos.h)

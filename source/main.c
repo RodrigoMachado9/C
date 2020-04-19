@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include <locale.h>
 
-#include "../header/calculos.h"
+#include "../headers/calculos.h"
 
 /*
  * importar -> include for gets
