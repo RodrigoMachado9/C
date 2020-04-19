@@ -67,7 +67,7 @@ int application_menu(){
             break;
         }
         else{
-            printf("value not found ");
+            printf("Opcao invalida! Favor escolher uma das opções ou 99 para Sair.");
 
         }
 
