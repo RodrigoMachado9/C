@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <locale.h>
+#include <string.h>
 
 #include "../headers/calculos.h"
 
@@ -14,6 +15,7 @@
  * importar -> include for gets
  * ver como funciona o .h macro do C in .cpp
  * */
+
 
 int application_menu(){
     printf("\nMenu Principal\n\n");
@@ -31,15 +33,38 @@ int application_menu(){
                   "[99] Sair\n";
 
     while (true){
-        char option;
+        char option[10];
         printf("%s", menu);
         puts("Escolha uma opção do menu: ");
-//        system("clear");
-//        fflush(stdin);
-//        option = getchar();
-        fatorial();
         scanf("%s", &option);
+        if(!strcmp(option, "02")){
+            fatorial();
+        } else if (!strcmp(option, "03")){
+            serie();
+        } else if (!strcmp(option, "04") || !strcmp(option, "41")){
+            tabuada();
+        } else if (!strcmp(option, "05")){
+            somatoria();
+        } else if (!strcmp(option, "18")){
+            idade();
+        } else if (!strcmp(option, "16")){
+            media();
+        } else if (!strcmp(option, "21")){
+            salario();
+        } else if (!strcmp(option, "23")){
+            estatistica();
+        } else if (!strcmp(option, "28")){
+            triangulo();
+        } else if (!strcmp(option, "29")){
+            primos();
+        } else if (!strcmp(option, "99")){
+            printf("thanks for using application!");
+            break;
+        }
+        else{
+            printf("value not found ");
 
+        }
         return EXIT_SUCCESS;
     }
 

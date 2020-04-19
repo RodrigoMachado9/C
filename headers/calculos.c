@@ -41,7 +41,6 @@ int salario(){
     return 0;
 }
 
-
 int estatistica(){
     printf("estatistica\n");
     return 0;

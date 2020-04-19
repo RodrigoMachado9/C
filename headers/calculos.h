@@ -7,4 +7,22 @@
 
 int fatorial();
 
+int serie();
+
+int tabuada();
+
+int somatoria();
+
+int idade();
+
+int media();
+
+int salario();
+
+int estatistica();
+
+int triangulo();
+
+int primos();
+
 #endif //C_CALCULOS_H

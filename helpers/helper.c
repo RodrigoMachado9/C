@@ -91,3 +91,14 @@ int hello_world(int v){
     printf(" hello world %d", Pi);
     return v;
 }
+
+
+bool keyword(char* string){
+    if (!strcmp(string, "02")){
+        return (true);
+
+    } else{
+        return (false);
+    }
+
+}
