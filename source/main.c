@@ -16,6 +16,10 @@
  * ver como funciona o .h macro do C in .cpp
  * */
 
+void banner(){
+    printf("thanks for using application!");
+
+}
 
 int application_menu(){
     printf("\nMenu Principal\n\n");
@@ -58,17 +62,17 @@ int application_menu(){
         } else if (!strcmp(option, "29")){
             primos();
         } else if (!strcmp(option, "99")){
-            printf("thanks for using application!");
+            printf("choose to leave... ");
+            banner();
             break;
         }
         else{
             printf("value not found ");
 
         }
-        return EXIT_SUCCESS;
+
     }
-
-
+    return EXIT_SUCCESS;
 }
 
 int main() {
