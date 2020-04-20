@@ -9,7 +9,9 @@ int fatorial(int fatorial);
 
 double serie(int serie);
 
-int tabuada();
+int tabuada(int number);
+
+int tabuada_nm(int n, int m);
 
 int somatoria();
 

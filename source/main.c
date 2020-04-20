@@ -26,7 +26,16 @@ void banner(char* string){
         printf("\nSéries Matemáticas\n");
         printf("Digite um número inteiro: _");
     } else if (!strcmp(string, "03.1")){
-        printf("Deseja calcular a série de ouro número? _");
+        printf("Deseja calcular a série de outro número? _");
+    } else if(!strcmp(string, "04")){
+        printf("\nTabuada\n");
+        printf("Digite um número inteiro:_");
+    }else if (!strcmp(string, "04.1")){
+        printf("Deseja calcular a tabuada de outro\n"
+               "número? _ ");
+    }else if (!strcmp(string,  "41")){
+        printf("Tabuadas");
+        printf("Digite dois numeros inteiros (n m): _");
     }
     else{
         printf("thanks for using application!");
@@ -34,6 +43,7 @@ void banner(char* string){
 
 
 }
+
 
 int application_menu(){
     printf("\nMenu Principal\n\n");
@@ -104,10 +114,57 @@ int application_menu(){
             }while (true);
 
 
-        } else if (!strcmp(option, "04") || !strcmp(option, "41")){
-            tabuada();
-            break;
-        } else if (!strcmp(option, "05")){
+        } else if (!strcmp(option, "04")){
+            do{
+
+                int number;
+                char loop[10];
+                banner("04");
+                scanf("%i", &number);
+                tabuada(number);
+                while (true){
+                    banner("04.1");
+                    scanf("%s", &loop);
+                    if (!strcmp(loop, "S") || !strcmp(loop, "s")){
+                        banner("04");
+                        scanf("%i", &number);
+                        tabuada(number);
+                    } else{
+                        break;
+                    }
+
+                }
+                break;
+            }while (true);
+
+        } else if (!strcmp(option, "41")){
+            do{
+
+                int n;
+                int m;
+                char loop[10];
+                banner("41");
+                scanf("%d %d", &n, &m);
+                tabuada_nm(n, m);
+                while (true){
+                    banner("41.1");
+                    scanf("%s", &loop);
+                    if (!strcmp(loop, "S") || !strcmp(loop, "s")){
+                        banner("41");
+                        scanf("%d %d", &n, &m);
+                        tabuada_nm(n, m);
+                    } else{
+                        break;
+                    }
+
+                }
+                break;
+            }while (true);
+
+
+
+        }
+        else if (!strcmp(option, "05")){
             somatoria();
             break;
         } else if (!strcmp(option, "18")){

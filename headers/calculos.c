@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include "calculos.h"
+#include <string.h>
 
 // #include <conio.h>
 
@@ -37,10 +38,39 @@ double serie(int number){
     return sum;
 }
 
-int tabuada(){
-    printf("tabuada\n");
+int tabuada(int number){
+    for(int x = 1; x <= 10; ++x){
+        printf("%i x %i = %i\n", x, number, x  * number);
+    }
     return 0;
 }
+
+int tabuada_nm(int inicio, int fim) {
+    printf("Tabuada do %i ao %i.", inicio, fim);
+    if(inicio <= fim){
+        int multiplicando, multiplicador, produto;
+        // for que irá gerar os multiplicandos
+        for (multiplicando=1; multiplicando <= 9; multiplicando ++){
+            // for que irá gerar os multiplicadores
+            for (multiplicador=1; multiplicador<=10; multiplicador ++){
+                // calcula o produto => multiplicando x multiplicador = produto
+                produto = multiplicando * multiplicador;
+                printf("%d x %d = %d\n", multiplicando, multiplicador, produto);
+            }
+            // quebra de linha  para separar cada as tabuadas construidas;
+            printf("\n");
+
+        }
+
+    } else{
+        printf("O numero inicial deve ser menor que o ultimo numero;\n"
+               "Exemplo: 1 4");
+    }
+
+
+    return 0;
+    }
+
 
 int somatoria(){
     printf("somatoria\n");
