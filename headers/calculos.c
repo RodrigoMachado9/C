@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "calculos.h"
 
+// #include <conio.h>
 
 int fatorial(int number){
     int fatorial = number;
@@ -16,8 +17,9 @@ int fatorial(int number){
         matrix[index] = index;
         index+=1;
     }
-    // fixme / include factorial notation~
-    // fixme/  4! = 4.3.2.1 = 24~
+    // fixme - include factorial notation~
+    // fixme - 4! = 4.3.2.1 = 24~
+    // fixme - conio.h not included ( investigation reason )
     printf("O fatorial de: %d é : %d.\n", number, controle);
 
     return 1;
