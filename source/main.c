@@ -25,6 +25,8 @@ void banner(char* string){
     } else if (!strcmp(string, "03")){
         printf("\nSéries Matemáticas\n");
         printf("Digite um número inteiro: _");
+    } else if (!strcmp(string, "03.1")){
+        printf("Deseja calcular a série de ouro número? _");
     }
     else{
         printf("thanks for using application!");
@@ -79,12 +81,28 @@ int application_menu(){
             }while (true);
 
         } else if (!strcmp(option, "03")){
-            // todo  - soma do recíproco dos primos  || harmonic series
-            int number;
-            banner("03");
-            scanf("%i", &number);
-            printf("Sum is %f", serie(number));
-            break;
+            do{
+
+                int number;
+                char loop[10];
+                banner("03");
+                scanf("%i", &number);
+                printf("Série: %.2f\n", serie(number));
+                while (true){
+                    banner("03.1");
+                    scanf("%s", &loop);
+                    if (!strcmp(loop, "S") || !strcmp(loop, "s")){
+                        banner("03");
+                        scanf("%i", &number);
+                        printf("Série: %.2f\n", serie(number));
+                    } else{
+                        break;
+                    }
+
+                }
+                break;
+            }while (true);
+
 
         } else if (!strcmp(option, "04") || !strcmp(option, "41")){
             tabuada();

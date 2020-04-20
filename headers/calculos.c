@@ -27,6 +27,7 @@ int fatorial(int number){
 
 
 double serie(int number){
+    // todo  - soma do recíproco dos primos  || harmonic series
     int i;
     float sum = 0;
     for (i = 1; i <= number; i++){
