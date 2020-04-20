@@ -1,14 +1,30 @@
 //
 // Created by rodrigo on 19/04/2020.
 //
-
 #include <stdio.h>
 #include "calculos.h"
+#include <string.h>
+#include <stdbool.h>
 
-int fatorial(){
-    printf("fatorial\n");
-    return 0;
+
+
+int fatorial(int number){
+    int fatorial = number;
+    int controle = 1;
+    int matrix[number];
+    int index = 0;
+
+    for(  ; fatorial >= 1; -- fatorial){
+        controle*=fatorial;
+        matrix[index] = index;
+        index+=1;
+    }
+    // fixme / include factorial notation~
+    printf("O fatorial de: %d é : %d.\n", number, controle);
+
+    return 1;
 }
+
 
 int serie(){
     printf("serie\n");

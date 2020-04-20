@@ -5,7 +5,7 @@
 #ifndef C_CALCULOS_H
 #define C_CALCULOS_H
 
-int fatorial();
+int fatorial(int fatorial);
 
 int serie();
 
