@@ -17,6 +17,7 @@ int fatorial(int number){
         index+=1;
     }
     // fixme / include factorial notation~
+    // fixme/  4! = 4.3.2.1 = 24~
     printf("O fatorial de: %d é : %d.\n", number, controle);
 
     return 1;
