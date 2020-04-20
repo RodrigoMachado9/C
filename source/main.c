@@ -32,7 +32,7 @@ void banner(char* string){
 
 int application_menu(){
     printf("\nMenu Principal\n\n");
-    char menu[] = "[02] Fatorial V\n"
+    char menu[] = "[02] Fatorial V\n" // fixme/done
                   "[03] Serie 1+ 1/2+1/2+..+1/n\n"
                   "[04] Tabuada de n V\n"
                   "[41] Tabuada de n ate m V\n"
@@ -50,6 +50,8 @@ int application_menu(){
         printf("%s", menu);
         puts("Escolha uma opção do menu: ");
         scanf("%s", &option);
+
+
         if(!strcmp(option, "02")){
             do{
 

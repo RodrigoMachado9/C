@@ -3,9 +3,6 @@
 //
 #include <stdio.h>
 #include "calculos.h"
-#include <string.h>
-#include <stdbool.h>
-
 
 
 int fatorial(int number){
