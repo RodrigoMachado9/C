@@ -26,9 +26,14 @@ int fatorial(int number){
 }
 
 
-int serie(){
-    printf("serie\n");
-    return 0;
+double serie(int number){
+    int i;
+    float sum = 0;
+    for (i = 1; i <= number; i++){
+        sum = sum + (float)1/i;
+    }
+
+    return sum;
 }
 
 int tabuada(){

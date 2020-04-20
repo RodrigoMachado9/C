@@ -2,12 +2,12 @@
 // Created by rodrigo on 19/04/2020.
 //
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <locale.h>
 #include <string.h>
+//#include <conio.h>
 
 #include "../headers/calculos.h"
 
@@ -22,6 +22,9 @@ void banner(char* string){
         printf("Digite um numero inteiro: ");
     } else if (!strcmp(string, "02.1")){
         printf("Deseja calcular o fatorial de outro número [S/N] ? _");
+    } else if (!strcmp(string, "03")){
+        printf("\nSéries Matemáticas\n");
+        printf("Digite um número inteiro: _");
     }
     else{
         printf("thanks for using application!");
@@ -48,7 +51,7 @@ int application_menu(){
     while (true){
         char option[10];
         printf("%s", menu);
-        puts("Escolha uma opção do menu: ");
+        puts("Escolha uma opção do menu: _ ");
         scanf("%s", &option);
 
 
@@ -76,7 +79,13 @@ int application_menu(){
             }while (true);
 
         } else if (!strcmp(option, "03")){
-            serie();
+            // todo  - soma do recíproco dos primos  || harmonic series
+            int number;
+            banner("03");
+            scanf("%i", &number);
+            printf("Sum is %f", serie(number));
+            break;
+
         } else if (!strcmp(option, "04") || !strcmp(option, "41")){
             tabuada();
             break;

@@ -7,7 +7,7 @@
 
 int fatorial(int fatorial);
 
-int serie();
+double serie(int serie);
 
 int tabuada();
 
