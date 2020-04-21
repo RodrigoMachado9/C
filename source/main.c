@@ -36,6 +36,10 @@ void banner(char* string){
     }else if (!strcmp(string,  "41")){
         printf("Tabuadas");
         printf("Digite dois numeros inteiros (n m): _");
+    } else if(!strcmp(string, "41.1")){
+        printf("Deseja calcular a tabuada de outro\n"
+               "intervalo de números? _");
+
     }
     else{
         printf("thanks for using application!");

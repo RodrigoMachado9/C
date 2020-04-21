@@ -42,11 +42,11 @@ int tabuada(int number){
     for(int x = 1; x <= 10; ++x){
         printf("%i x %i = %i\n", x, number, x  * number);
     }
-    return 0;
+    return 1;
 }
 
 int tabuada_nm(int inicio, int fim) {
-    printf("Tabuada do %i ao %i.\n\n", inicio, fim);
+    printf("\nTabuada do %i ao %i.\n\n", inicio, fim);
     if(inicio <= fim){
         int multiplicando, multiplicador, produto;
         // for que irá gerar os multiplicandos
@@ -79,8 +79,8 @@ int tabuada_nm(int inicio, int fim) {
     }
 
 
-    return 0;
-    }
+    return 1;
+}
 
 
 int somatoria(){
