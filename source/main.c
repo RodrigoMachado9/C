@@ -10,7 +10,7 @@
 //#include <conio.h>
 
 #include "../headers/calculos.h"
-#include "../helpers/helper.c"      // example... without .h
+#include "../utils/helper.c"      // example... without .h
 
 
 

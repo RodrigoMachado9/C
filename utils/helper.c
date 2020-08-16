@@ -2,7 +2,7 @@
 // Created by rodrigo on 18/04/2020.
 //
 #include <stdio.h>
-#include "../helpers/variables.c"
+#include "../utils/variables.c"
 
 
 int pique()
