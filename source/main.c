@@ -10,6 +10,9 @@
 //#include <conio.h>
 
 #include "../headers/calculos.h"
+#include "../helpers/helper.c"      // example... without .h
+
+
 
 /*
  * importar -> include for gets
@@ -265,10 +268,13 @@ int application_menu() {
         }
         return EXIT_SUCCESS;
     }
+    return 1;
 }
-void data_structure(){
 
-    printf("hello fucking world ");
+void data_structure(){
+    printf("hello fucking world \n");
+    hello_world_with_pi(3);
+
 
 }
 

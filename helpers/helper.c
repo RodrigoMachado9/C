@@ -1,9 +1,9 @@
 //
 // Created by rodrigo on 18/04/2020.
 //
+#include <stdio.h>
+#include "../helpers/variables.c"
 
-#include <iostream>
-extern const int Pi;  // value for pi
 
 int pique()
 {
@@ -22,59 +22,59 @@ int pique()
 
 int show_month(){
 
-    int pegames  = getchar();
-    switch (pegames) {
+    int mes  = getchar();
+    switch (mes) {
 
 
         case '1':
             printf("*************\n");
-            printf("Janeiro");
+            printf("January");
             printf("\n*************\n");
             break;
 
         case '2':
             printf("*************\n");
-            printf("Fevereiro");
+            printf("February");
             printf("\n*************\n");
             break;
         case '3':
             printf("*************\n");
-            printf("Março");
+            printf("March");
             printf("\n*************\n");
             break;
         case '4':
             printf("*************\n");
-            printf("Abril");
+            printf("April");
             printf("\n*************\n");
             break;
         case '5':
             printf("*************\n");
-            printf("Maio");
+            printf("May");
             printf("\n*************\n");
             break;
         case '6':
             printf("*************\n");
-            printf("Junho");
+            printf("June");
             printf("\n*************\n");
             break;
         case '7':
             printf("*************\n");
-            printf("Julho");
+            printf("July");
             printf("\n*************\n");
             break;
         case '8':
             printf("*************\n");
-            printf("Agosto");
+            printf("August");
             printf("\n*************\n");
             break;
         case '9':
             printf("*************\n");
-            printf("Setembro");
+            printf("September");
             printf("\n*************\n");
             break;
         default:
             printf("*************\n");
-            printf("Escolha um mes valido");
+            printf("Choose a valid month");
             printf("\n*************\n");
             break;
 
@@ -87,18 +87,20 @@ int show_month(){
 }
 
 
-int hello_world(int v){
-    printf(" hello world %d", Pi);
-    return v;
+int hello_world_with_pi(int value){
+    if (value){
+        printf("%f", PI);
+    }
+    return value;
 }
 
 
 bool keyword(char* string){
     if (!strcmp(string, "02")){
-        return (true);
+        return 1;
 
     } else{
-        return (false);
+        return 0;
     }
 
 }
