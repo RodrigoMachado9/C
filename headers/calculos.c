@@ -5,7 +5,6 @@
 #include "calculos.h"
 #include <string.h>
 
-// #include <conio.h>
 
 int fatorial(int number){
     int fatorial = number;
@@ -83,14 +82,86 @@ int tabuada_nm(int inicio, int fim) {
 }
 
 
-int somatoria(){
-    printf("somatoria\n");
+int somatoria(int n,  int m){
+    if(n <= m) {
+        /*  Operação em ordem crescente.
+         *  n = 1 e m = 10, escreva 1 + 3 + 5 + 7 + 9 = 25.
+         *
+         * */
+        printf("\nSomatória dos ímpares de: %d e %d\n", n, m);
+        int sum = 0;
+        int le[20];
+        for (int i = 0; i <= m; i++) {
+            if ((i % 2) != 0) {
+                sum += i;
+                le[i] = i;
+
+            }
+
+        }
+
+        printf("\nSomatória dos numeros ímpares: %d\n\n", sum);
+
+
+    }
     return 0;
+}
+void result_idade(int mulher_nova, int mulher_velha,
+        int homem_novo, int homem_velho,
+        int total_homem, int total_mulher){
+
+    printf("\nIdade da mulher mais nova: %d", mulher_nova);
+    printf("\nIdade da mulher mais velha: %d", mulher_velha);
+    printf("\nIdade do homem mais novo: %d", homem_novo);
+    printf("\nIdade do homem mais velho: %d", homem_velho);
+    printf("\nTotal de homens: %d",  total_homem);
+    printf("\nTotal de mulheres: %d", total_mulher);
+
 }
 
 int idade(){
-    printf("idade\n");
-    return 0;
+    int idade_pessoa = 0;
+    char sexo[10];
+    int mulher_nova = 0, homem_novo = 0, mulher_velha = 0, homem_velho = 0;
+    int total_homens = 0, total_mulheres = 0, aux_homem, aux_mulher;
+
+
+    for (int i=1; i <=4; i++){
+        printf("Digite a idade da %d ° pessoa: _", i);
+        scanf("%d", &idade_pessoa);
+        printf("Digite o sexo da %d  ° pessoa: _", i);
+        scanf("%s", &sexo);
+
+        if (!strcmp(sexo, "m") || !strcmp(sexo, "M")){
+            if (idade_pessoa <= homem_novo && idade_pessoa < homem_velho){
+                homem_novo += idade_pessoa;
+                total_homens += 1;
+            } else {
+                homem_velho += idade_pessoa;
+                total_homens += 1;
+
+
+            }
+
+        } else if (!strcmp(sexo, "f") || !strcmp(sexo, "F")){
+            aux_mulher = idade_pessoa;
+            if (aux_mulher > idade_pessoa){
+                mulher_nova += idade_pessoa;
+                total_mulheres += 1;
+
+            }else{
+                mulher_velha += idade_pessoa;
+                total_mulheres += 1;
+
+            }
+
+
+        }
+
+    }
+    result_idade(mulher_nova, mulher_velha, homem_novo,
+            homem_velho, total_homens,  total_mulheres);
+return 1;
 }
 
 

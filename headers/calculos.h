@@ -13,9 +13,9 @@ int tabuada(int number);
 
 int tabuada_nm(int n, int m);
 
-int somatoria();
+int somatoria(int num1,  int num2);
 
-int idade();
+int idade(); // fixme;
 
 int media();
 
