@@ -271,15 +271,21 @@ int application_menu() {
     return 1;
 }
 
-void data_structure(){
-    printf("hello fucking world \n");
-    hello_world_with_pi(3);
-
+void sample_example(){
+    printf("%s, %f", "hello world", hello_world_with_pi(true));
 
 }
 
+
+
+void uni9(){
+
+}
+
+
 int main(){
 //    application_menu();
-    data_structure();
+//    sample_example();
+    uni9();
 
 }

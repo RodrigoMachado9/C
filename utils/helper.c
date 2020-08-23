@@ -87,11 +87,11 @@ int show_month(){
 }
 
 
-int hello_world_with_pi(int value){
+float hello_world_with_pi(int value){
     if (value){
-        printf("%f", PI);
+        return "%f", PI;
     }
-    return value;
+    return 0.0;
 }
 
 
