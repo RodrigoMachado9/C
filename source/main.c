@@ -282,8 +282,8 @@ void sample_example(){
  * */
 void calculate_salary(){
     float salary_amount, number_of_hours, discount_percentage_inss, gross_salary, discount_amount, net_salary;
-    printf("Digite o valor do salario, numero de horas e %% de desconto (valores separados por espaço): ");
-    scanf("%f %f %f", &salary_amount, &number_of_hours, &discount_percentage_inss);
+    printf("Digite o valor do salario, numero de horas e %% de desconto: ");
+    scanf("%f, %f, %f", &salary_amount, &number_of_hours, &discount_percentage_inss);
     gross_salary = salary_amount*number_of_hours;
     discount_amount = gross_salary/100*discount_percentage_inss;
     net_salary = gross_salary - discount_amount;
@@ -332,7 +332,7 @@ void calculate_resources(){
  * leitura em graus fahrenheilt;
  * */
 
-void function_fahrenheilt(){
+void calculate_fahrenheilt(){
     float c,f;
     printf("\n Digite uma temperatura em Fahrenheilt: ");
     scanf("%f",  &f);
@@ -341,12 +341,27 @@ void function_fahrenheilt(){
 
 }
 
+
+/*
+ * calculo da área de um trapézio qualquer;
+ * */
+void calculate_trapezoid(){
+    float b_maior, b_menor, altura, at;
+    printf("\nDigite a base menor, base maior e altura de um trapézio: ");
+    scanf("%f, %f, %f", &b_maior, &b_menor, &altura);
+    at= (b_maior + b_menor) * altura/2;
+    printf("\nA area do trapézio é: %f", at);
+}
+
+
+
 int main(){
 //    application_menu();
 //    sample_example();
 //    calculate_salary();
 //    calculate_resources();
-      function_fahrenheilt();
+//      calculate_fahrenheilt();
+      calculate_trapezoid();
 
 
 }
