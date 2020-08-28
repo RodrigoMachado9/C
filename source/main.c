@@ -358,10 +358,10 @@ void calculate_trapezoid(){
 int main(){
 //    application_menu();
 //    sample_example();
-//    calculate_salary();
-//    calculate_resources();
-//      calculate_fahrenheilt();
-      calculate_trapezoid();
+//    calculate_salary();                    // aula 1
+//    calculate_resources();                 // aula 1
+//      calculate_fahrenheilt();             // aula 1
+      calculate_trapezoid();                 // aula 1
 
 
 }
