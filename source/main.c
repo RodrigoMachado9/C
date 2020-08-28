@@ -277,15 +277,76 @@ void sample_example(){
 }
 
 
+/*
+ * calculo do salário liquido de um funcionario que trabalha por hora.
+ * */
+void calculate_salary(){
+    float salary_amount, number_of_hours, discount_percentage_inss, gross_salary, discount_amount, net_salary;
+    printf("Digite o valor do salario, numero de horas e %% de desconto (valores separados por espaço): ");
+    scanf("%f %f %f", &salary_amount, &number_of_hours, &discount_percentage_inss);
+    gross_salary = salary_amount*number_of_hours;
+    discount_amount = gross_salary/100*discount_percentage_inss;
+    net_salary = gross_salary - discount_amount;
+    printf("\nO valor do salario bruto é: %f", gross_salary);
+    printf("\nO valor de desconto é: %f", discount_amount);
+    printf("\nO valor do salário líquido é: %f\n", net_salary);
+}
 
-void uni9(){
+
+/*
+ * libera o buffer do teclado.
+ * */
+void clean_buffer(){
+    fflush(stdin);
+}
+
+/*
+ * calcular quantos azulejos são ncessários para revestir uma piscina.
+ * */
+
+void calculate_resources(){
+    float cp, lp, pp, la, aa, at, aaz, pl, pc, fp;
+    float qa;
+
+    printf("\nDigite os dados a seguir da piscina");
+    printf("\nComprimento, largura, profundidade (cm): ");
+    scanf("%f, %f, %f", &cp, &lp, &pp);
+    clean_buffer();
+    printf("\nDigite os dados a seguir do azulejo (cm): ");
+    printf("\nLargura, altura (cm): ");
+    scanf("%f, %f", &la, &aa);
+    clean_buffer();
+    pl = 2*cp*pp;
+    pc = 2*lp*pp;
+    fp = cp*lp;
+    at = pl+pc+fp;
+    aaz = la * aa;
+    qa = ((at/aaz)*1.05);
+    printf("A quantidade de azulejos para o revestimento da piscina é: %d", qa);
+
+
 
 }
 
+/*
+ * leitura em graus fahrenheilt;
+ * */
+
+void function_fahrenheilt(){
+    float c,f;
+    printf("\n Digite uma temperatura em Fahrenheilt: ");
+    scanf("%f",  &f);
+    c = ((f - 32.0)*5.0/9.0);
+    printf("\nA temperatura em graus celsius é: %f", c);
+
+}
 
 int main(){
 //    application_menu();
 //    sample_example();
-    uni9();
+//    calculate_salary();
+//    calculate_resources();
+      function_fahrenheilt();
+
 
 }
